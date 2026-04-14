@@ -48,7 +48,7 @@ post '/items' do
   end
 
   if data['name'].nil? || data['name'].empty?
-    halt 400, { error: 'name is required' }.to_json
+    halt 400, { error: 'name is required ll' }.to_json
   end
 
   item = ItemStore.create(data['name'])
