@@ -44,7 +44,7 @@ post '/items' do
   begin
     data = JSON.parse(request.body.read)
   rescue JSON::ParserError
-    halt 400, { error: 'Invalid JSON' }.to_json
+    halt 400, { error: 'Invalid JSON Item' }.to_json
   end
 
   if data['name'].nil? || data['name'].empty?
